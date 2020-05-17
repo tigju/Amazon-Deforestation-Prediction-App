@@ -1,14 +1,13 @@
 from joblib import load
-pipeline1 = load('assets/rf1.joblib')
-pipeline2 = load('assets/rf2.joblib')
+pipeline1 = load('assets/xgb1.joblib')
+pipeline2 = load('assets/xgb2.joblib')
 # Imports from 3rd party libraries
 import dash
 import dash_bootstrap_components as dbc
 import dash_core_components as dcc
 import dash_html_components as html
 from dash.dependencies import Input, Output
-# from xgboost import XGBRegressor
-from sklearn.ensemble import RandomForestRegressor
+from xgboost import XGBRegressor
 import pandas as pd
 import numpy as np
 import category_encoders as ce
