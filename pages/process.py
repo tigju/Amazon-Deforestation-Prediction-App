@@ -46,7 +46,7 @@ Geopandas.
 To see the distribution of coordinates values from sample dataset I used simple Matplotlib.pyplot library. 
 Latitude has normal distribution, but longitude is a little left-skewed. 
         """),
-		html.Img(src='assets/coordinates-dist.jpg',className='img-fluid'),
+		html.Img(src='assets/coordinates-dist.JPG',className='img-fluid'),
  		dcc.Markdown(
         """
 ---
@@ -68,7 +68,7 @@ Ridge model Validation R^2 coefficient: 0.8753 lon
 ``` 
 Metrics showed some good results, however on the graph we can see that Ridge model didn't do a good job.
         """),
-        html.Img(src='assets/true-predicted-ridge.jpg',className='img-fluid'),
+        html.Img(src='assets/true-predicted-ridge.JPG',className='img-fluid'),
         dcc.Markdown(
         """
 
@@ -87,7 +87,7 @@ Desicion Tree Validation R^2 coefficient: 0.5692 lon
 ```
 Decision tree is also not so good in predicting locations
 		"""),
-		html.Img(src='assets/true-pred-dt.jpg',className='img-fluid'),
+		html.Img(src='assets/true-pred-dt.JPG',className='img-fluid'),
 		dcc.Markdown(
         """
 
@@ -107,7 +107,7 @@ Random Forest Validation R^2 coefficient: 0.8134 lon
 ```
 Lets take a look at the scatter plot for Random Forest. It did much better that other models I tried so far.
 		"""),
-		html.Img(src='assets/true-predicted-rf.jpg',className='img-fluid'),
+		html.Img(src='assets/true-predicted-rf.JPG',className='img-fluid'),
 		dcc.Markdown(
         """
 
@@ -126,7 +126,7 @@ XGBoost Validation R^2 coefficient: 0.7476 lon
 ```
 However, in my opinion, XGBoost Model predictions looks closer to true values on the scatter plot:
 		"""),
-		html.Img(src='assets/true-predicted-xgb.jpg',className='img-fluid'),
+		html.Img(src='assets/true-predicted-xgb.JPG',className='img-fluid'),
 		dcc.Markdown(
         """
 
