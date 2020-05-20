@@ -16,7 +16,7 @@ column1 = dbc.Col(
         """
 ### **Working Process**
 Visit my Medium blog post for more detailed process: 
-##### [Can We Predict Deforestation in Amazon Forests with Machine Learning?](https://medium.com/https://medium.com/@iuliia.stanina)
+##### [Can We Predict Deforestation in Amazon Forests with Machine Learning?](https://medium.com/@iuliia.stanina/can-we-predict-deforestation-in-amazon-forests-with-machine-learning-2dc7785e5e49)
 
 ---
         """),
