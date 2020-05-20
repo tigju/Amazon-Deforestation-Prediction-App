@@ -19,7 +19,10 @@ Visit my Medium blog post for more detailed process:
 ##### [Can We Predict Deforestation in Amazon Forests with Machine Learning?](https://medium.com/https://medium.com/@iuliia.stanina)
 
 ---
-
+        """),
+        html.Br(),
+        dcc.Markdown(
+        """
 #### **Purpose**
 The aim is to predict the location of an area where deforestation most likely to occur. I decided to try out 
 different models such as **Ridge Model**, **Decision Tree**, **Random Forest** and **XGBoost** for my predictions 
@@ -46,13 +49,12 @@ Geopandas.
 To see the distribution of coordinates values from sample dataset I used simple Matplotlib.pyplot library. 
 Latitude has normal distribution, but longitude is a little left-skewed. 
         """),
-		html.Img(src='assets/coordinates-dist.JPG',className='img-fluid'),
+		html.Img(src='assets/coordinates-distribution.png',className='img-fluid', style={'width':'75%'}),
+        html.Br(),
+        html.Br(),
  		dcc.Markdown(
         """
----
-
 ### **Choosing the Model**
----
 I tried different models to see how they would perform in predictions for coordinates. The first one I chose is Ridge Model.
 #### 1. Ridge Regression Model
 
@@ -68,12 +70,11 @@ Ridge model Validation R^2 coefficient: 0.8753 lon
 ``` 
 Metrics showed some good results, however on the graph we can see that Ridge model didn't do a good job.
         """),
-        html.Img(src='assets/true-predicted-ridge.JPG',className='img-fluid'),
+        html.Img(src='assets/ridge.png',className='img-fluid', style={'width':'75%'}),
+        html.Br(),
+        html.Br(),
         dcc.Markdown(
         """
-
-#
-#
 #### 2. Decision Tree Model
 The next model I tried is *DecisionTreeRegressor* model. I used *TargetEncoder* and default hyperparameters. 
 For validation data I used the same metrics:
@@ -87,16 +88,15 @@ Desicion Tree Validation R^2 coefficient: 0.5692 lon
 ```
 Decision tree is also not so good in predicting locations
 		"""),
-		html.Img(src='assets/true-pred-dt.JPG',className='img-fluid'),
+		html.Img(src='assets/decision.png',className='img-fluid', style={'width':'75%'}),
+        html.Br(),
+        html.Br(),
 		dcc.Markdown(
         """
-
-#
-#
 #### 3. Random Forest Model
 I took another step and tried Random Forest Regressor. For the Random Forest I used *hyperparameter tuning* and
-applied *RandomizedSearchCV*. With the *hyperparameter tuning* and *RandomizedSearchCV* I better scores for my validation
-metrics:
+applied *RandomizedSearchCV*. With the *hyperparameter tuning* and *RandomizedSearchCV*. I got better scores for 
+my validation metrics:
 ```
 Random Forest Validation MAE: 1.5652 lat
 Random Forest Validation MAE: 2.4324 lon
@@ -107,13 +107,12 @@ Random Forest Validation R^2 coefficient: 0.8134 lon
 ```
 Lets take a look at the scatter plot for Random Forest. It did much better that other models I tried so far.
 		"""),
-		html.Img(src='assets/true-predicted-rf.JPG',className='img-fluid'),
+		html.Img(src='assets/random-forest.png',className='img-fluid', style={'width':'75%'}),
+        html.Br(),
+        html.Br(),
 		dcc.Markdown(
         """
-
-#
-#
-#### 3. XGBoost Model
+#### 4. XGBoost Model
 For my last model I chose XGBoost Regressor. I use some *hyperparameters tuning* and *'early_stopping for this model'*
 Metrics look a little worse that Random Forest: 
 ```
@@ -126,16 +125,34 @@ XGBoost Validation R^2 coefficient: 0.7476 lon
 ```
 However, in my opinion, XGBoost Model predictions looks closer to true values on the scatter plot:
 		"""),
-		html.Img(src='assets/true-predicted-xgb.JPG',className='img-fluid'),
+		html.Img(src='assets/xgb.png',className='img-fluid', style={'width':'75%'}),
+        html.Br(),
+        html.Br(),
 		dcc.Markdown(
         """
-
-#
-#
+### Final Predictions
+For my final predictions I decided to choose XGBoost model for my test set. And I got pretty good results, considering that 
+I had only five features. 
+        """),
+        html.Img(src='assets/test-prediction-xgboost.png',className='img-fluid', style={'width':'75%'}),
+        html.Br(),
+        html.Br(),
+        dcc.Markdown(
+        """
+Also, lets compare value distribution on a test set
+        """),
+        html.Img(src='assets/test-predicted-distribution.png',className='img-fluid', style={'width':'75%'}),
+        dcc.Markdown(
+        """
 ---
 ### Conclusion
+In my opinion, to predict coordinates of locations is not so easy, because they are two values representing 3D space.
+Even that I treated coordinates as in 2D plane and used several models to see which ones perform better I didn't have
+very good results. Also, my dataset didn't have many features to use for predictions and I ended up with only five. 
+It would be nice if dataset would have some features like population density, distance from big city to place of deforestation,
+causes of deforestation, and maybe some others could help to identify future locations of deforestation.
 
-		""")
+		"""),
     ],
 )
 

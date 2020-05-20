@@ -108,8 +108,8 @@ def predict(area, day, month, year, state):
     
     y_pred_1 = pipeline1.predict(df)[0]
     y_pred_2 = pipeline2.predict(df)[0]
-    print(y_pred_1)
-    print(y_pred_2)
+    # print(y_pred_1)
+    # print(y_pred_2)
 
     results = [y_pred_1, y_pred_2]
     graphing = {
