@@ -28,6 +28,7 @@ layout = html.Div([
         ### Predict
         Use the controls below to update your predicted location, based on 
         area in km^2, day, month, year and state.
+        *(Predictions based on sample dataset using XGboost model.)*
     """),
 html.Div([
         dcc.Markdown('###### Area in km^2'),
