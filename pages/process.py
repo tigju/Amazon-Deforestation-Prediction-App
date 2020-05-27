@@ -17,7 +17,9 @@ column1 = dbc.Col(
 ### **Working Process**
 Visit my Medium blog post for more detailed process: 
 ##### [Can We Predict Deforestation in Amazon Forests with Machine Learning?](https://medium.com/@iuliia.stanina/can-we-predict-deforestation-in-amazon-forests-with-machine-learning-2dc7785e5e49)
-
+##### Disclaimer: In the medium blog post I described the process on population dataset, and *Random Forest* model showed the best
+##### results. However, in the Dash app I described the process based on sample dataset (10% of the population dataset, due to
+##### the size limits) and *XGBoost* model showed better predictions, so I used it . 
 ---
         """),
         html.Br(),
@@ -32,8 +34,8 @@ as it is in 2D space and not the sphere, and predict latitude and longitude as t
 
 #### **Data Wrangling, Data Cleaning**
 I used pandas profiling to look at my data and features closely and see the distribution, check for cardinality, zeros and nulls. 
-Data set initially had 14 columns and 474930 rows. I took a sample from the dataset for the purposes of showing the process in a web app 
-and got 47105 rows. There was a leakage features that I excluded from dataset and some zero values that I converted to nulls, later to 
+Data set initially had 14 columns and 474930 rows. I took a sample from the population dataset for the purposes of size limitations 
+to show the process in a web app and got 47105 rows. There was a leakage features that I excluded from dataset and some zero values that I converted to nulls, later to 
 sort them with Simple Imputer. Also, *'areakm_squared'* feature was very skewed, because it had outliers and I decided to remove all the
 values that are more than 3 standard deviations from the mean. There were a lot of useless features like *'gid'*, *'origin_id'*, *'scene_id'* which were all unique, *'julday'*, *'dfsn'*, and some others didn't make any sence. 
 I also split up the date into day/month/year which is possible become a good features in predictions. So, after the explorarion and 

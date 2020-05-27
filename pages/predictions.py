@@ -28,7 +28,7 @@ layout = html.Div([
         ### Predict
         Use the controls below to update your predicted location, based on 
         area in km^2, day, month, year and state.
-        *(Predictions based on sample dataset using XGboost model.)*
+        *(Predictions based on sample dataset using XGboost model. Check the [Process](https://amazon-deforestation.herokuapp.com/process) page why.)*
     """),
 html.Div([
         dcc.Markdown('###### Area in km^2'),
