@@ -7,3 +7,5 @@
 ### to find out more about data wrangling and the process check out the link on my blog post:
 
 ### [my Medium blog post](https://medium.com/@iuliia.stanina/can-we-predict-deforestation-in-amazon-forests-with-machine-learning-2dc7785e5e49)
+
+#### link to repository with workflow and pipeline -> [Amazon-Deforestation-Prediction-workflow-and-pipeline](https://github.com/tigju/Amazon-Deforestation-Prediction-workflow-and-pipeline)
