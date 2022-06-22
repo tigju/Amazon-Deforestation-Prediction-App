@@ -6,7 +6,7 @@ scikit-learn==0.22.2.post1
 category_encoders==2.1.0
 joblib==0.14.1
 pandas==1.0.3
-numpy==1.16.5
+numpy==1.22.0
 geopandas==0.7.0
 geojson==2.5.0
 shapely==1.7.0
