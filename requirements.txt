@@ -14,4 +14,4 @@ geopy==1.21.0
 plotly==4.6.0
 gunicorn==20.0.4
 xgboost==1.0.2
-python==3.9
+python==3.12
